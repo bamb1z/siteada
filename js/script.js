@@ -1,10 +1,20 @@
-document.getElementById("botaoEnviar").addEventListener("click", validaFormulario)
+document
+  .getElementById("botaoEnviar")
+  .addEventListener("click", validaFormulario);
+
+var nome = document.getElementById("nome-usuario");
+var email = document.getElementById("email-usuario");
+var telefone = document.getElementById("tel-usuario");
+
 
 function validaFormulario() {
-  if (document.getElementById("nome-usuario").value != "" && document.getElementById("email-usuario").value != "" && document.getElementById("tel-usuario").value != "") {
-      alert("Prontinho! Você irá receber mais novidades no e-mail!")
-  }
-  else {
-      alert("Por favor, preencha os campos vazios!");
+  if (
+    nome.value != "" &&
+    email.value != "" &&
+    telefone.value != ""
+  ) {
+    alert("Prontinho! Você vai receber mais novidades no seu e-mail!");
+  } else {
+    alert("Por favor, preencha os campos vazios!");
   }
 }
